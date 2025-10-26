@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "2ef13e10-a667-4500-ae37-d7836724ea5c",
+		"name": "Events Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40256974",
+		"_collection_link": "https://edges-testing-diploma-final-project-team.postman.co/workspace/a280f0fa-cb1d-4673-8065-39106b8aa88d/collection/40256974-2ef13e10-a667-4500-ae37-d7836724ea5c?action=share&source=collection_link&creator=40256974"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin create event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzUzMDUyMzcsImV4cCI6MTczNTMwODgzN30.cTd1uAqQbs_y7SXOxiVmI9r06G9Yv_weeaDedqgLkgY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Art Exhibition\",\r\n \"description\": \"An exhibition of contemporary art pieces.\",\r\n \"date\": \"2025-01-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin show events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzUzMDUyMzcsImV4cCI6MTczNTMwODgzN30.cTd1uAqQbs_y7SXOxiVmI9r06G9Yv_weeaDedqgLkgY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin RSVP to an event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzUzMDY0NDUsImV4cCI6MTczNTMxMDA0NX0.F4S0cIflQUsD5EcPJcj36VAXPu4wI4skd711iww1VFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/events/71/rsvps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"71",
+								"rsvps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin RSVP to an invalid event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzUzMDY0NDUsImV4cCI6MTczNTMxMDA0NX0.F4S0cIflQUsD5EcPJcj36VAXPu4wI4skd711iww1VFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/events/51/rsvps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"51",
+								"rsvps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin show RSVPS for an event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzUzMDY0NDUsImV4cCI6MTczNTMxMDA0NX0.F4S0cIflQUsD5EcPJcj36VAXPu4wI4skd711iww1VFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/events/71/rsvps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"71",
+								"rsvps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin delete events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzUzMDY0NDUsImV4cCI6MTczNTMxMDA0NX0.F4S0cIflQUsD5EcPJcj36VAXPu4wI4skd711iww1VFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/events/72",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"72"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin delete invalid events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzUzMDY0NDUsImV4cCI6MTczNTMxMDA0NX0.F4S0cIflQUsD5EcPJcj36VAXPu4wI4skd711iww1VFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/events/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User create event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzM1MzA0ODEwLCJleHAiOjE3MzUzMDg0MTB9.HdH1OjVi7DgPm8wStXgb6uvnJMtCjQXaNT8EQt8ayaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Art Exhibition\",\r\n \"description\": \"An exhibition of contemporary art pieces.\",\r\n \"date\": \"2025-01-10\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User show events",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzM1MzA0ODEwLCJleHAiOjE3MzUzMDg0MTB9.HdH1OjVi7DgPm8wStXgb6uvnJMtCjQXaNT8EQt8ayaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User RSVP to an event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzM1MzA2MzExLCJleHAiOjE3MzUzMDk5MTF9.4iJdCZYUMKAvcMOeDft-8Z8LTDa55wn-e9FXkVMSdt0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/events/71/rsvps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"71",
+								"rsvps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User RSVP to an invalid event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzM1MzA2MzExLCJleHAiOjE3MzUzMDk5MTF9.4iJdCZYUMKAvcMOeDft-8Z8LTDa55wn-e9FXkVMSdt0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/events/51/rsvps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"51",
+								"rsvps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User show RSVPS for an event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzM1MzA2MzExLCJleHAiOjE3MzUzMDk5MTF9.4iJdCZYUMKAvcMOeDft-8Z8LTDa55wn-e9FXkVMSdt0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/events/71/rsvps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"71",
+								"rsvps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User delete events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzM1MzA2MzExLCJleHAiOjE3MzUzMDk5MTF9.4iJdCZYUMKAvcMOeDft-8Z8LTDa55wn-e9FXkVMSdt0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/events/73",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"73"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
